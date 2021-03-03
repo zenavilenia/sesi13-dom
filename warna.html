@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aplikasi Ubah Warna</h1>
+    <div>
+        <label>Warna latar: </label>
+        <input type="color" id="bgColor"/>
+    </div>
+    <div>
+        <label>Warna Text: </label>
+        <input type="color" id="txtColor" onchange="changeTextColor()"/>
+    </div>
+
+    <script>
+        var bgColor = document.getElementById("bgColor");
+        var txtColor = document.getElementById("txtColor");
+
+        bgColor.addEventListener("change", (event) => {
+            document.body.style.backgroundColor = bgColor.value;
+        })
+
+        function changeTextColor() {
+            document.body.style.color = txtColor.value;
+        }
+    </script>
+</body>
+</html>
